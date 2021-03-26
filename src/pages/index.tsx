@@ -1,12 +1,12 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data }: any) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
     <>
-      {posts.map((post) => {
+      {posts.map((post: any) => {
         const { title, date, description } = post.frontmatter;
         return (
           <div key={date}>
