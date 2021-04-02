@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuIcon from "@material-ui/icons/Menu";
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import StarBorderIcon from "@material-ui/icons/StarBorder";
 import { Button } from "../globalStyles";
 import {
   Nav,
@@ -14,7 +14,6 @@ import {
   NavLinks,
   NavBtnLink,
 } from "./Navbar.elements";
-
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -32,16 +31,16 @@ function Navbar() {
   };
 
   useEffect(() => {
+    window.addEventListener("resize", showButton);
     showButton();
   }, []);
 
-  window.addEventListener("resize", showButton);
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/" onClick={closeMobileMenu}>
-            <StarBorderIcon/>
+            <StarBorderIcon />
             DzikieZdjęcia
           </NavLogo>
           <MobileIcon onClick={handleClick}>
