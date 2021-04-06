@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import zdj1 from "./Navbar/zdj2.jpg";
+import { Slider } from "./Slider";
 
 export const Hero = () => {
   return (
     <HeroContainer>
-      <Left>
+      {/* <ImageCostum src={zdj1} alt={"xx"}/> */}
+      <div style={{ width: "30%", height: "500px", margin: "100px" }}>
+        <Slider />
+      </div>
+      {/* <Left>
         <h2>Zdjęcia Dzieci</h2>
         <img src={zdj1} alt="loading Error"></img>
       </Left>
       <Right>
         <img src={zdj1} alt="loading Error"></img>
         <h2>Zdjęcia Dzieci</h2>
-      </Right>
+      </Right> */}
     </HeroContainer>
   );
 };
